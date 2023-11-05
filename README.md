@@ -20,4 +20,4 @@ Major Requirements for the KRA Pin Exemption:
 
 9. Comment on Group structure: Bank should submit data about if they are group of banks and attach the bank group structure to the web application
 
-10. Geomapping api: Application will be able to locate the where appplication being used and show map of the location of Times Towers
+10. Country api: Application will be enable applicant to show the country where the bank is located in the world 

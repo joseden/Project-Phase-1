@@ -81,57 +81,28 @@ function attachPdf() {
 const attachButton = document.getElementById('attachButton');
 attachButton.addEventListener('click', attachPdf);
 
-async function showCountries() {
-  let xhr = new XMLHttpRequest();
-  const url = 'https://restcountries.com/v3.1/name/';
 
-  // Define the data you want to send in the request
-  const data = { name: 'your_country_name' }; // Replace 'your_country_name' with the desired country name
-
-  // Convert the data to a JSON string
-  const dataString = JSON.stringify(data);
-
-  xhr.open('POST', url, true);
-
-  // Set the request header to indicate JSON content
-  xhr.setRequestHeader('Content-Type', 'application/json');
-
-  xhr.onload = function () {
-    if (xhr.status == 200) {
-      console.log('Success');
-      let countries = JSON.parse(this.responseText);
-      console.log(countries);
-      countries.forEach(country => {
-        const countryCard = document.createElement('div');
-        countryCard.innerHTML = country.name;
-        // Append the countryCard to the document, or perform any other desired actions here
-      });
-    }
-  };
-
-  // Send the request with the data in the request body
-  xhr.send(dataString);
-}
-
-// Call the function to make the API request
-showCountries();
-
-
-
-
-let likeCount = 0;
-const likeButton = document.getElementById("likeButton");
-const likeCountDisplay = document.getElementById("likeCount");
-
-likeButton.addEventListener("click", function () {
-  likeCount++;
-  likeCountDisplay.textContent = likeCount === 1 ? "1 Like" : likeCount + " Likes";
-});
-
-
-
-
-
+const countrySelect = document.getElementById('country');
+        
+        // Function to fetch country data from RESTcountries API
+        function fetchCountries() {
+            fetch('https://restcountries.com/v3.1/all')
+                .then((response) => response.json())
+                .then((data) => {
+                    data.forEach((country) => {
+                        const option = document.createElement('option');
+                        option.value = country.name.common;
+                        option.textContent = country.name.common;
+                        countrySelect.appendChild(option);
+                    });
+                })
+                .catch((error) => {
+                    console.error('Error fetching country data:', error);
+                });
+        }
+        
+        // Call the function to populate the select element with countries
+        fetchCountries();
 
 
 

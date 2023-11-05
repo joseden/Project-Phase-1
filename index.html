@@ -12,8 +12,6 @@
 
 <body>
 
-    <button onclick="showCountries()"> Country Search</button>
-
     <div class="container">
         <h1>PIN EXEMPTION FOR BANKS</h1>
 
@@ -60,8 +58,7 @@
 
                         <div>
                             <label for="textInput">Comment on Group Structure of Bank</label>
-                            <textarea id="textInput" rows="5" cols="60" maxlength="500"
-                                oninput="checkWordLimit()"></textarea>
+                            <textarea id="textInput" rows="5" cols="60" maxlength="500" oniput=""></textarea> 
                         </div>
 
                         <div class="form">
@@ -69,26 +66,31 @@
                             <form id="pdfForm" action="" method="post" enctype="multipart/form-data">
                                 <input type="file" id="pdfFile" name="pdfFile" accept=".pdf">
                                 <button type="button" id="attachButton">Attach PDF</button>
+
+                                
+
+                                
+
                             </form>
-                        </div>
-                        <br />
+                    </div>
 
-                  
+                    <br/>
 
+                    <div>
+                        <label for="country"> Bank Country </label>
+                        <select id="country"></select>
+                    </div>
 
+                   
+                    </form>
 
         </form>
 
-        <br/>
-
-        <button id="likeButton">Like</button>
-        <p id="likeCount">0 Likes</p>
 
     </div>
 
-   
 
-    <script src="/home/user/KRA Web App Project/index.js"></script>
+    <script src="/home/user/Project-Phase-1/index.js"></script>
 
 </body>
 
