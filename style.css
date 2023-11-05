@@ -1,0 +1,58 @@
+body {
+    background-image: url(https://blog.faidihr.com/uploads/events/how%20to%20file%20kra%20returns%20without%20a%20p9%20form,%20A%20step-by-step%20guide06.26.57.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: #ccc;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 80px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    text-decoration:beige;
+    display: list-item;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 91%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form { display: block;
+    font-weight: bold;
+}
+
+#likeButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  #likeCount {
+    font-size: 18px;
+    color: #007bff;
+  }
