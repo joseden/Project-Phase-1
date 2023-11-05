@@ -12,12 +12,10 @@ Major Requirements for the KRA Pin Exemption:
 
 5. Certificate of Incorporation/ Company number: The Bank to input the certificate number that will be used when making the application.
 
-6. Name of Directors Adress: API to generate fake Adress information
+6. Details of transactions to be carried out in Kenya and nature of income accruing in Kenya : Bank should submit the transactions to the web application
 
-7. Details of transactions to be carried out in Kenya and nature of income accruing in Kenya : Bank should submit the transactions to the web application
+7. Copy of the latest financial statements: Bank to attach the latest financial statements
 
-8. Copy of the latest financial statements: Bank to attach the latest financial statements
+8. Comment on Group structure: Bank should submit data about if they are group of banks and attach the bank group structure to the web application
 
-9. Comment on Group structure: Bank should submit data about if they are group of banks and attach the bank group structure to the web application
-
-10. Country api: Application will be enable applicant to show the country where the bank is located in the world 
+9. Country api: Application will be enable applicant to show the country where the bank is located in the world 
