@@ -44,15 +44,3 @@ input[type="number"] {
     font-weight: bold;
 }
 
-#likeButton {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-
-  #likeCount {
-    font-size: 18px;
-    color: #007bff;
-  }

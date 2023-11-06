@@ -36,28 +36,36 @@ textInput.addEventListener("input", function () {
   }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const textarea = document.getElementById('reason');
+  const wordCountDisplay = document.getElementById('wordCount');
+  const submitButton = document.getElementById('submitButton');
 
+  textarea.addEventListener('input', function () {
+    const content = textarea.value;
+    const words = content.trim().split(/\s+/);
+    const wordCount = words.length;
+    const wordsRemaining = 500 - wordCount;
 
-// Get the textarea element and the word count display element
-const textarea = document.getElementById('reason');
-const wordCountDisplay = document.getElementById('wordCount');
+    wordCountDisplay.textContent = `Words remaining: ${wordsRemaining}`;
 
-// Add an input event listener to the textarea
-textarea.addEventListener('input', function () {
-  const content = textarea.value;
-  const wordCount = content.trim().split(/\s+/).length; // Split content by spaces to count words
-  const wordsRemaining = 500 - wordCount;
+    if (wordsRemaining >= 0) {
+      submitButton.removeAttribute('disabled');
+    } else {
+      submitButton.setAttribute('disabled', 'true');
+      textarea.value = words.slice(0, 500).join(' ');
+      wordCountDisplay.textContent = 'Word limit exceeded';
+    }
+  });
 
-  // Update the word count display
-  wordCountDisplay.textContent = `Words remaining: ${wordsRemaining}`;
-
-  // Disable the textarea if the word limit is reached
-  if (wordsRemaining < 0) {
-    textarea.value = content.split(/\s+/).slice(0, 500).join(' ');
-    wordCountDisplay.textContent = 'Word limit exceeded';
-    textarea.setAttribute('disabled', 'true');
-  }
+  submitButton.addEventListener('click', function () {
+    const content = textarea.value;
+    // Here, you can do something with the content, like saving it or processing it.
+    alert('Content submitted: ' + content);
+  });
 });
+
+
 
 
 // Function to handle attaching the PDF

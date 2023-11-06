@@ -37,17 +37,17 @@
 
                 <div>
                     <label for="textInput">Principal Activity of the Bank</label>
-                    <textarea id="textInput" rows="5" cols="60" maxlength="400" oninput="checkWordLimit()"></textarea>
-                    <div id="wordCount"></div>
+                    <textarea id="textInput" rows="5" cols="60" maxlength="500" oninput="checkWordLimit()"></textarea>
+                    <div id="wordCount"></div> 
+                    <br />
 
                 </div>
 
-
                 <div>
-                    <label for="reason">Reason for Applying for the Pin Exemption</label>
-                    <textarea id="reason" rows="5" cols="60" maxlength="500"></textarea>
-                    <div id="wordCount">
-
+                    <label for="textInput">Reason for Applying for Exemption</label>
+                    <textarea id="reason" rows="4" cols="60" maxlength="500" placeholder="Type your text here"></textarea>
+                    <p id="wordCount">Words remaining: 500</p>
+                    <button id="submitButton" disabled>Submit</button>
                     </div>
 
                     <div>
