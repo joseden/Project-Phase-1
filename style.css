@@ -1,46 +1,97 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body background and text color */
 body {
-    background-image: url(https://blog.faidihr.com/uploads/events/how%20to%20file%20kra%20returns%20without%20a%20p9%20form,%20A%20step-by-step%20guide06.26.57.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #f3f3f3;
+    color: #333;
+    font-family: Arial, sans-serif;
 }
 
-.container {
-    background-color: #ccc;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 80px;
-    border: 1px solid #ccc;
-    border-radius: 50px;
-    text-decoration:beige;
-    display: list-item;
-}
-
-
-h1 {
+/* Header Styles */
+.header {
+    background-color: #0074a9; /* Header background color */
+    color: #fff; /* Text color in the header */
+    padding: 10px 0; /* Padding for the header content */
     text-align: center;
 }
 
-.form-group {
-    margin-bottom: 30px;
+.navbar {
+    display: flex;
+    justify-content: center;
 }
 
-label {
-    display: block;
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 20px; /* Spacing between navigation items */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #fff;
     font-weight: bold;
+    font-size: 18px; /* Font size for navigation links */
 }
 
-input[type="text"],
-input[type="number"] {
-    width: 91%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
+/* Hover effect for navigation links */
+.nav-item a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Form Section Styles */
+.container section {
+    margin-bottom: 20px;
+}
+
+/* Form Input Styles */
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
-.form { display: block;
-    font-weight: bold;
+/* Button Styles */
+button {
+    background-color: #0074a9; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+button:disabled {
+    background-color: #ccc; /* Disabled button background color */
+    cursor: not-allowed;
+}
+
+/* Select Styles */
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

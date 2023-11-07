@@ -3,13 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <title>PIN EXEMPTION APPLICATION</title>
     <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+    <header class="header">
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#">About</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
     <div class="container">
         <h1>PIN EXEMPTION FOR BANKS</h1>
 
@@ -42,12 +51,11 @@
 
 
             <h2> Exemption Request </h2>
-            <div>
+            <section>
+                <div>
                 <label for="reason">Reason for Applying for Exemption:</label>
                 <textarea id="reason" rows="4" cols="60" maxlength="500" placeholder="Type your text here"></textarea>
                 <p id="word">Words remaining: 500</p>
-                
-                <div>
                 <button id="submit">Submit</button>
             </div>
             </section>
@@ -71,9 +79,6 @@
                         <select id="countrySelect">
                             <option value="" disabled selected>Select a country</option>
                         </select>
-                    </div>
-                    <div><br>
-
                         <button type="button" id="submitButton">Submit</button>
                     </div>
                 </section>

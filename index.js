@@ -37,8 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-
 document.addEventListener("DOMContentLoaded", function() {
   const reasonTextarea = document.getElementById('reason');
   const wordCountDisplay = document.getElementById('word');
@@ -80,12 +78,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
-
-
-
-
 // Function to handle attaching the PDF
 function attachPdf() {
   const pdfInput = document.getElementById('pdfFile');
@@ -110,7 +102,7 @@ attachButton.addEventListener('click', attachPdf);
 
 document.addEventListener('DOMContentLoaded', function () {
   const countrySelect = document.getElementById('countrySelect');
-  const submitButton = document.getElementById('submitButton');
+  const submitButton = document.getElementById('locationSubmit');
 
   // Function to fetch country data from RESTcountries API
   function fetchCountries() {
@@ -144,10 +136,4 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
-
-
-
-
-
-
+  
