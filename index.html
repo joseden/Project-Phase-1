@@ -15,7 +15,6 @@
 
         <form id="dataForm">
             <section>
-                <section>
                     <h2>Bank Information</h2>
                     <div>
                         <label for="name">Name of Bank:</label>
@@ -23,8 +22,7 @@
                     </div>
                     <div>
                         <button type="button" id="submitButton">Submit</button>
-
-                        
+  
                         <div><br />
                             <label for="residentStatus">Citizenship status of the Bank:</label>
 
@@ -34,6 +32,7 @@
                             </select>
                             <p id="result"></p>
                         </div>
+            </section>
 
 
                         <section>
@@ -45,20 +44,24 @@
                                         <option value="" disabled selected>Select a country</option>
                                     </select>
                                 </div>
-                                <div>
+                                <div><br>
                                     <button type="button" id="submitButton">Submit</button>
                                 </div>
                         </section>
 
                         <section>
-                            <h2>Bank Activities and Exemption Request</h2>
+                            
+                            <h2>Bank Activities</h2>
                             <div>
                                 <label for="principalActivity">Principal Activity of the Bank:</label>
                                 <textarea id="principalActivity" rows="5" cols="60" maxlength="500"
                                     oninput="checkWordLimit()"></textarea>
                                 <div id="wordCount"></div>
                             </div>
+                        </section>
 
+                        <section>
+                            <h2> Exemption Request </h2>
                             <div>
                                 <label for="reason">Reason for Applying for Exemption:</label>
                                 <textarea id="reason" rows="4" cols="60" maxlength="500"
@@ -67,6 +70,7 @@
                                 <button id="submitButton" disabled>Submit</button>
                             </div>
                         </section>
+                        
 
 
                         <section>
