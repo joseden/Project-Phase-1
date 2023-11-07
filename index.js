@@ -18,33 +18,35 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  const dataForm = document.getElementById('dataForm');
+  const nameInput = document.getElementById('name');
+  const residentStatusSelect = document.getElementById('residentStatus');
+  const resultText = document.getElementById('result');
+  const submitButton = document.getElementById('submitButton');
 
+  submitButton.addEventListener('click', function() {
+      const bankName = nameInput.value;
+      const residencyStatus = residentStatusSelect.value;
 
+      const data = {
+          bankName: bankName,
+          residencyStatus: residencyStatus
+      };
 
+      console.log('Data submitted:', data);
 
+      dataForm.reset();
 
-
-
-
-
-
-
-// Get the select element and the result paragraph element
-const selectElement = document.getElementById('residentStatus');
-const resultElement = document.getElementById('result');
-
-// Add an event listener to the select element
-selectElement.addEventListener('change', function () {
-  const selectedValue = selectElement.value;
-
-  if (selectedValue === 'resident') {
-    resultElement.textContent = 'You are a resident of Kenya';
-  } else if (selectedValue === 'non-resident') {
-    resultElement.textContent = 'You are a non-resident of Kenya';
-  } else {
-    resultElement.textContent = 'Please make a selection';
-  }
+    });
+    residentStatusSelect.addEventListener('change', function() {
+        const selectedOption = residentStatusSelect.options[residentStatusSelect.selectedIndex];
+        resultText.textContent = `Citizenship status: ${selectedOption.text}`;
+    });
 });
+
+
+
 
 // Read operation using this function
 
