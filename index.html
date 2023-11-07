@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIN EXEMPTION APPLICATION</title>
     <link type="text/css" rel="stylesheet" href="style.css">
+
 </head>
 
-<body>
-
-    <div class="container">
+ <div class="container">
         <h1>PIN EXEMPTION FOR BANKS</h1>
 
         <form id="dataForm">
@@ -29,62 +28,3 @@
                     </select>
                     <p id="result">Result will be displayed here.</p>
                 </div>
-
-                <div>
-                    <label for="agentForbank">Agent making application on behalf of the Bank:</label>
-                    <input type="text" name="agentForbank" id="agentForbank">
-                </div>
-            </section>
-
-            <section>
-                <h2>Bank Activities and Exemption Request</h2>
-                <div>
-                    <label for="principalActivity">Principal Activity of the Bank:</label>
-                    <textarea id="principalActivity" rows="5" cols="60" maxlength="500" oninput="checkWordLimit()"></textarea>
-                    <div id="wordCount"></div>
-                </div>
-
-                <div>
-                    <label for="reason">Reason for Applying for Exemption:</label>
-                    <textarea id="reason" rows="4" cols="60" maxlength="500" placeholder="Type your text here"></textarea>
-                    <p id="wordCount">Words remaining: 500</p>
-                    <button id="submitButton" disabled>Submit</button>
-                </div>
-            </section>
-
-            <section>
-                <h2>Additional Information</h2>
-                <div>
-                    <label for="companyNumber">Company Number/Certificate of Incorporation:</label>
-                    <input type="text" name="companyNumber" id="companyNumber">
-                </div>
-
-                <div>
-                    <label for="groupStructureComment">Comment on Group Structure of Bank:</label>
-                    <textarea id="groupStructureComment" rows="5" cols="60" maxlength="500" oninput=""></textarea>
-                </div>
-            </section>
-
-            <section>
-                <h2>Financial Statements</h2>
-                <form id="pdfForm" action="" method="post" enctype="multipart/form-data">
-                    <label for="pdfFile">Attach Financial Statements (PDF):</label>
-                    <input type="file" id="pdfFile" name="pdfFile" accept=".pdf">
-                    <button type="button" id="attachButton">Attach PDF</button>
-                </form>
-            </section>
-
-            <section>
-                <h2>Bank Location</h2>
-                <div>
-                    <label for="country">Bank Country:</label>
-                    <select id="country"></select>
-                </div>
-            </section>
-        </form>
-    </div>
-
-    <script src="index.js"></script>
-</body>
-
-</html>
