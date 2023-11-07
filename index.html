@@ -24,23 +24,30 @@
                     <div>
                         <button type="button" id="submitButton">Submit</button>
 
-
-                        <div>
+                        
+                        <div><br />
                             <label for="residentStatus">Citizenship status of the Bank:</label>
-                            <select id="residentStatus">
+
+                            <br><select id="residentStatus">
                                 <option value="resident">Resident</option>
                                 <option value="non-resident">Non-Resident</option>
                             </select>
-                            <p id="result">Result will be displayed here.</p>
+                            <p id="result"></p>
                         </div>
 
 
                         <section>
                             <h2>Bank Location</h2>
-                            <div>
-                                <label for="country">Bank Country:</label>
-                                <select id="country"></select>
-                            </div>
+                            <section>
+                                <div>
+                                    <label for="country">Select a country:</label>
+                                    <select id="countrySelect">
+                                        <option value="" disabled selected>Select a country</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <button type="button" id="submitButton">Submit</button>
+                                </div>
                         </section>
 
                         <section>
