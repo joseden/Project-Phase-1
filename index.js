@@ -1,3 +1,34 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const dataForm = document.getElementById('dataForm');
+  const nameInput = document.getElementById('name');
+  const submitButton = document.getElementById('submitButton');
+
+  submitButton.addEventListener('click', function() {
+      // Get the value of the Name of Bank input
+      const bankName = nameInput.value;
+      const data = {
+          bankName: bankName
+      };
+
+      console.log('Data submitted:', data);
+
+      
+      dataForm.reset();
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Get the select element and the result paragraph element
 const selectElement = document.getElementById('residentStatus');
 const resultElement = document.getElementById('result');
