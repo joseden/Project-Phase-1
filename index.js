@@ -104,6 +104,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const countrySelect = document.getElementById('countrySelect');
   const submitButton = document.getElementById('locationSubmit');
 
+
+  
+
   // Function to fetch country data from RESTcountries API
   function fetchCountries() {
     fetch('https://restcountries.com/v3.1/all')
