@@ -14,38 +14,42 @@
         <h1>PIN EXEMPTION FOR BANKS</h1>
 
         <form id="dataForm">
+
             <section>
                 <h2>Bank Information</h2>
                 <div>
                     <label for="name">Name of Bank:</label>
-                    <input type="text" name="name" id="name">
-                </div>
-                <div>
-                    <button type="button" id="submitButton">Submit</button>
-
-
-            <section>
-                <h2>Bank Activities</h2>
-                <div>
-                    <label for="principalActivity">Principal Activity of the Bank:</label>
-                    <textarea id="principalActivity" rows="5" cols="60" maxlength="500" 
-                    placeholder="Type your text here"></textarea>
-                    <div id="wordCount">Words remaining: 500</div>
+                    <textarea id="name" rows="4" cols="60" placeholder="Type your text here"></textarea>
                 </div>
                 <div>
                     <button type="button" id="submitButton">Submit</button>
                 </div>
             </section>
-            
 
-                <h2> Exemption Request </h2>
+
+
+            <h2>Bank Activities</h2>
+            <div>
+                <label for="principalActivity">Principal Activity of the Bank:</label>
+                <textarea id="principalActivity" rows="5" cols="60" maxlength="500"
+                    placeholder="Type your text here"></textarea>
+                <div id="wordCount">Words remaining: 500</div>
+            </div>
+            <div>
+                <button type="button" id="submitButton">Submit</button>
+            </div>
+            </section>
+
+
+            <h2> Exemption Request </h2>
+            <div>
+                <label for="reason">Reason for Applying for Exemption:</label>
+                <textarea id="reason" rows="4" cols="60" maxlength="500" placeholder="Type your text here"></textarea>
+                <p id="word">Words remaining: 500</p>
+                
                 <div>
-                    <label for="reason">Reason for Applying for Exemption:</label>
-                    <textarea id="reason" rows="4" cols="60" maxlength="500"
-                        placeholder="Type your text here"></textarea>
-                    <p id="wordCount">Words remaining: 500</p>
-                    <button id="submitButton">Submit</button>
-                </div>
+                <button id="submit">Submit</button>
+            </div>
             </section>
 
 
@@ -53,7 +57,7 @@
             <section>
                 <h2>Financial Statements</h2>
                 <form id="pdfForm" action="" method="post" enctype="multipart/form-data">
-                    <label for="pdfFile">Attach Financial Statements (PDF):</label>
+                    <label for="pdfFile">Attach Financial Statements (PDF):</label><br>
                     <input type="file" id="pdfFile" name="pdfFile" accept=".pdf">
                     <button type="button" id="attachButton">Attach PDF</button>
                 </form>
@@ -69,7 +73,7 @@
                         </select>
                     </div>
                     <div><br>
-                        
+
                         <button type="button" id="submitButton">Submit</button>
                     </div>
                 </section>
@@ -78,7 +82,7 @@
         </form>
     </div>
 
-   
+
     <script src="index.js"></script>
 
 

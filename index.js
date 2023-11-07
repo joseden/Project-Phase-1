@@ -1,21 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const dataForm = document.getElementById('dataForm');
-  const nameInput = document.getElementById('name');
+document.addEventListener("DOMContentLoaded", function () {
+  const nameTextarea = document.getElementById('name');
   const submitButton = document.getElementById('submitButton');
 
-  submitButton.addEventListener('click', function() {
-      // Get the value of the Name of Bank input
-      const bankName = nameInput.value;
-      const data = {
-          bankName: bankName
-      };
+  submitButton.addEventListener('click', function () {
 
-      console.log('Data submitted:', data);
+    const bankName = nameTextarea.value;
 
-      
-      dataForm.reset();
+    const data = {
+      bankName: bankName
+    };
+    console.log('Data submitted:', data);
+
+    nameTextarea.value = "";
   });
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const principalActivityTextarea = document.getElementById('principalActivity');
@@ -36,6 +35,51 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const reasonTextarea = document.getElementById('reason');
+  const wordCountDisplay = document.getElementById('word');
+  const submitButton = document.getElementById('submit');
+
+  reasonTextarea.addEventListener('input', function() {
+      const maxLength = 500;
+      const currentLength = reasonTextarea.value.length;
+      const wordsRemaining = maxLength - currentLength;
+
+      wordCountDisplay.textContent = `Words remaining: ${wordsRemaining}`;
+
+      if (wordsRemaining >= 0) {
+          submitButton.disabled = false; // Enable the submit button
+      } else {
+          submitButton.disabled = true; // Disable the submit button
+      }
+  });
+
+  submitButton.addEventListener('click', function() {
+      // Get the text entered in the textarea
+      const exemptionReason = reasonTextarea.value;
+
+      // Perform data validation if necessary
+
+      // Create an object to store the data
+      const data = {
+          exemptionReason: exemptionReason
+      };
+
+      // Save or process the data as needed
+      // For now, we'll just log it to the console
+      console.log('Data submitted:', data);
+
+      // You can reset the form after submission if required
+      reasonTextarea.value = "";
+  });
+});
+
+
+
 
 
 
@@ -70,19 +114,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to fetch country data from RESTcountries API
   function fetchCountries() {
-      fetch('https://restcountries.com/v3.1/all')
-          .then((response) => response.json())
-          .then((data) => {
-              data.forEach((country) => {
-                  const option = document.createElement('option');
-                  option.value = country.name.common;
-                  option.textContent = country.name.common;
-                  countrySelect.appendChild(option);
-              });
-          })
-          .catch((error) => {
-              console.error('Error fetching country data:', error);
-          });
+    fetch('https://restcountries.com/v3.1/all')
+      .then((response) => response.json())
+      .then((data) => {
+        data.forEach((country) => {
+          const option = document.createElement('option');
+          option.value = country.name.common;
+          option.textContent = country.name.common;
+          countrySelect.appendChild(option);
+        });
+      })
+      .catch((error) => {
+        console.error('Error fetching country data:', error);
+      });
   }
 
   // Call the function to populate the select element with countries
@@ -90,13 +134,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Event listener for the Submit button
   submitButton.addEventListener('click', function () {
-      const selectedCountry = countrySelect.value;
-      if (selectedCountry) {
-          // Perform any desired action with the selected country, e.g., submit it or save it
-          console.log('Selected country:', selectedCountry);
-      } else {
-          alert('Please select a country before submitting.');
-      }
+    const selectedCountry = countrySelect.value;
+    if (selectedCountry) {
+      // Perform any desired action with the selected country, e.g., submit it or save it
+      console.log('Selected country:', selectedCountry);
+    } else {
+      alert('Please select a country before submitting.');
+    }
   });
 });
 
