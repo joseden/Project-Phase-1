@@ -15,78 +15,73 @@
 
         <form id="dataForm">
             <section>
-                    <h2>Bank Information</h2>
-                    <div>
-                        <label for="name">Name of Bank:</label>
-                        <input type="text" name="name" id="name">
-                    </div>
-                    <div>
-                        <button type="button" id="submitButton">Submit</button>
-  
-                        <div><br />
-                            <label for="residentStatus">Citizenship status of the Bank:</label>
+                <h2>Bank Information</h2>
+                <div>
+                    <label for="name">Name of Bank:</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div>
+                    <button type="button" id="submitButton">Submit</button>
 
-                            <br><select id="residentStatus">
-                                <option value="resident">Resident</option>
-                                <option value="non-resident">Non-Resident</option>
-                            </select>
-                            <p id="result"></p>
-                        </div>
+
+            <section>
+                <h2>Bank Activities</h2>
+                <div>
+                    <label for="principalActivity">Principal Activity of the Bank:</label>
+                    <textarea id="principalActivity" rows="5" cols="60" maxlength="500" 
+                    placeholder="Type your text here"></textarea>
+                    <div id="wordCount">Words remaining: 500</div>
+                </div>
+                <div>
+                    <button type="button" id="submitButton">Submit</button>
+                </div>
+            </section>
+            
+
+                <h2> Exemption Request </h2>
+                <div>
+                    <label for="reason">Reason for Applying for Exemption:</label>
+                    <textarea id="reason" rows="4" cols="60" maxlength="500"
+                        placeholder="Type your text here"></textarea>
+                    <p id="wordCount">Words remaining: 500</p>
+                    <button id="submitButton">Submit</button>
+                </div>
             </section>
 
 
-                        <section>
-                            <h2>Bank Location</h2>
-                            <section>
-                                <div>
-                                    <label for="country">Select a country:</label> <br>
-                                    <select id="countrySelect">
-                                        <option value="" disabled selected>Select a country</option>
-                                    </select>
-                                </div>
-                                <div><br>
-                                    <button type="button" id="submitButton">Submit</button>
-                                </div>
-                        </section>
 
-                        <section>
-                            
-                            <h2>Bank Activities</h2>
-                            <div>
-                                <label for="principalActivity">Principal Activity of the Bank:</label>
-                                <textarea id="principalActivity" rows="5" cols="60" maxlength="500"
-                                    oninput="checkWordLimit()"></textarea>
-                                <div id="wordCount"></div>
-                            </div>
-                        </section>
+            <section>
+                <h2>Financial Statements</h2>
+                <form id="pdfForm" action="" method="post" enctype="multipart/form-data">
+                    <label for="pdfFile">Attach Financial Statements (PDF):</label>
+                    <input type="file" id="pdfFile" name="pdfFile" accept=".pdf">
+                    <button type="button" id="attachButton">Attach PDF</button>
+                </form>
+            </section>
 
-                        <section>
-                            <h2> Exemption Request </h2>
-                            <div>
-                                <label for="reason">Reason for Applying for Exemption:</label>
-                                <textarea id="reason" rows="4" cols="60" maxlength="500"
-                                    placeholder="Type your text here"></textarea>
-                                <p id="wordCount">Words remaining: 500</p>
-                                <button id="submitButton" disabled>Submit</button>
-                            </div>
-                        </section>
+            <section>
+                <h2>Bank Location</h2>
+                <section>
+                    <div>
+                        <label for="country">Select a country:</label> <br>
+                        <select id="countrySelect">
+                            <option value="" disabled selected>Select a country</option>
+                        </select>
+                    </div>
+                    <div><br>
                         
-
-
-                        <section>
-                            <h2>Financial Statements</h2>
-                            <form id="pdfForm" action="" method="post" enctype="multipart/form-data">
-                                <label for="pdfFile">Attach Financial Statements (PDF):</label>
-                                <input type="file" id="pdfFile" name="pdfFile" accept=".pdf">
-                                <button type="button" id="attachButton">Attach PDF</button>
-                            </form>
-                        </section>
+                        <button type="button" id="submitButton">Submit</button>
+                    </div>
+                </section>
 
 
         </form>
     </div>
 
+   
     <script src="index.js"></script>
+
+
 </body>
 
 </html>
