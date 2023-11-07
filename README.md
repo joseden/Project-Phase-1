@@ -1,24 +1,25 @@
-CHECKLIST FOR PROCESSING APPLICATIONS FOR PIN EXEMPTION UNDER SECTION 12(5A) OF TAX PROCEDURES ACT, 2015
+AUTHOR : JOSEPH HAMISI DENA
 
-Major Requirements for the KRA Pin Exemption:
+Project Name: KENYA REVENUE PIN EXEMPTION APPLICATION
 
-1. Name of the Bank Applicant:
+DESCRIPTION OF THE PROJECT
 
-2. Residence of the Bank: Bank is "resident" if registered  in Kenya otherwise it will be "non-resident" if not registered in Kenya.
-
-3. Agent making appplication on behalf of the Bank: Bank can have an agent making appplication on behalf of the Bank like "PWC".Otherwise Bank can make application themselves
-
-4. Principal activity of the Bank: What is the bank main activity for income.
+The Project is a prototype project that will assist the developers in KRA to create an application which assist the tax policy department to automate the process of issuing pin exemption to Banks around the world. 
 
 
-5. Reason for seeking PIN exemption : Bank should input why the are applying for PIN exemption status and save and submit the data to the web application
 
-6. Certificate of Incorporation/ Company number: The Bank to input the certificate number that will be used when making the application.
+Major Requirements for the KRA Pin Exemption Web APP:
 
-7. Details of transactions to be carried out in Kenya and nature of income accruing in Kenya : Bank should submit the transactions to the web application
+1. Name of the Bank Applicant: Input the name of the Bank and it will show name of the Bank
 
-8. Copy of the latest financial statements: Bank to attach the latest financial statements
+2. Principal Activity of the Bank which  the bank inputs the main business activity of the Bank
 
-9. Comment on Group structure: Bank should submit data about if they are group of banks and attach the bank group structure to the web application
+3. Reason for seeking PIN exemption : Bank should input why the are applying for PIN exemption status and save and submit the data to the web application
 
-10. Country api: Application will be enable applicant to show the country where the bank is located in the world 
+4. Attach Finacial statements:  Bank to attach the latest financial statements and bank account statements to the web application
+
+5. Country api: Application will be enable applicant to show the country where the bank is located in the world 
+
+
+
+Copyright (c) 2014 by the Kenya Revenue Authority
